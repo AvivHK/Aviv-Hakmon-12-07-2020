@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("mysql://root:1234@localhost/propit");
+
+const sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL);
+
+// const sequelize = new Sequelize("mysql://root:1234@localhost/propit");
 
 // GET missions
 router.get("/missions", async function (req, res) {

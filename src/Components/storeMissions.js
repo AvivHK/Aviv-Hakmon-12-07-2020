@@ -5,7 +5,9 @@ import { missionStore } from "./missionStore";
 import { createBrowserHistory } from "history";
 import { userStore } from "./userStore";
 const history = createBrowserHistory();
-const userRoute = "http://localhost:4200";
+// const userRoute = "http://localhost:4200";
+const userRoute = "";
+
 
 export class StoreMission {
 
