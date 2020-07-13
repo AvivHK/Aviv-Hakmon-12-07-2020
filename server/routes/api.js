@@ -26,7 +26,7 @@ router.get("/users", async function (req, res) {
 router.post("/mission", async function (req, res) {
 
   let mission = req.body;
-  let query = `INSERT INTO propit.missions VALUES 
+  let query = `INSERT INTO missions VALUES 
   (null,
     ${mission.userId},
     '${mission.name}',
@@ -83,7 +83,7 @@ router.get("/user/:username", async function (req, res) {
 //POST user
 router.post("/user", async function (req, res) {
   let user = req.body;
-  let query = `INSERT INTO propit.accounts VALUES 
+  let query = `INSERT INTO accounts VALUES 
   (null,
     '${user.username}',
     '${user.password}',
