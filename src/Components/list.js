@@ -35,6 +35,7 @@ class navbar extends Component {
 
 
     render() {
+
         return (
             <div className="listContainer">
                 <div className="titleMissions">ניהול המשימות</div>
