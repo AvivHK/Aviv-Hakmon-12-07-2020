@@ -13,7 +13,7 @@ router.get("/missions", async function (req, res) {
     .then((results, metadata) => {
       res.send(results[0]);
     });
-})
+});
 
 // GET users
 router.get("/users", async function (req, res) {
