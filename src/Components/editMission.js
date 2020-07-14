@@ -44,7 +44,6 @@ class editMission extends Component {
 
 
     render() {
-        console.log(this.props.storeMission.currentMission)
         return (
             <div className="addMissionContainer">
                 <div></div>

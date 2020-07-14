@@ -26,8 +26,8 @@ class navbar extends Component {
                     <div>077998501</div>
                     <img src={Logo}></img>
                     <div className="loginAndLogout">
-                        {this.props.storeMission.currentUserLoggedIn.name ? <div className="sayHello">שלום, {this.props.storeMission.currentUserLoggedIn.name}</div> : null}
-                        {this.props.storeMission.currentUserLoggedIn.name ? <button className="disconnectButton" onClick={this.props.storeMission.logout}>התנתק</button> : null}
+                        {this.props.storeMission.currentUserLoggedIn.username ? <div className="sayHello">שלום, {this.props.storeMission.currentUserLoggedIn.name}</div> : null}
+                        {this.props.storeMission.currentUserLoggedIn.username ? <button className="disconnectButton" onClick={this.props.storeMission.logout}>התנתק</button> : null}
                     </div>
                 </div>
             </div>

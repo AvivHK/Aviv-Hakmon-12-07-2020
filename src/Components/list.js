@@ -20,17 +20,25 @@ class navbar extends Component {
     }
 
     handleChange = async e => {
-        this.setState({ search: e.target.value })
-        this.search()
+        await this.setState({ search: e.target.value })
+        await this.search()
     }
 
-    search =  () => {
-        let filtered = [];
-        this.props.storeMission.missions.map(m => {
-            return m.userName.includes(this.state.search) ? filtered.push(m) : null
+    search = async () => {
+        let filteredUsername = [];
+        let filteredDetails = [];
+        await this.props.storeMission.missions.map(m => {
+            return m.userName.includes(this.state.search) ? filteredUsername.push(m) : null
         })
-        console.log(this.props.storeMission.missions[3].userName.includes(this.state.search))
-        this.setState({filtered: [...filtered]})
+        await this.props.storeMission.missions.map(m => {
+            return m.details.includes(this.state.search) ? filteredDetails.push(m) : null
+        })
+        filteredDetails.map(m => {
+            if (!filteredUsername.find(mm => mm.missionId === m.missionId)) {
+                filteredUsername.push(m)
+            }
+        })
+        await this.setState({ filtered: [...filteredUsername] })
     }
 
 
@@ -54,7 +62,7 @@ class navbar extends Component {
                             <th className="tableHead">פעולות</th>
                         </tr>
                     </thead>
-                    {(this.state.filtered.length !== 0) ?  this.state.filtered.map((m, key) => <Item mission={m} key={key} />) : this.props.storeMission.missions.map((m, key) => <Item mission={m} key={key} />)}
+                    {(this.state.filtered.length === 0 && this.state.search !== "") ? this.state.filtered.map((m, key) => <Item mission={m} key={key} />) : this.state.filtered.length !== 0 ? this.state.filtered.map((m, key) => <Item mission={m} key={key} />) : this.props.storeMission.missions.map((m, key) => <Item mission={m} key={key} />)}
                 </table>
             </div>
         );

@@ -119,6 +119,18 @@
     direction: rtl;
 }
 
+.titleAdmin {
+  display: grid;
+  justify-content: center;
+    width: 100%;
+    font-size: 2vw;
+    color: rgb(56, 168, 56);
+    font-weight: bold;
+    margin-top: 2.5vw;
+    margin-bottom: 2vw;
+    direction: rtl;
+}
+
 .search {
     width: 79.5%;
     height: 2.8vw;
@@ -149,7 +161,7 @@
 }
 
 .tableAddMessage {
-    border: 0.2vh solid black;
+  border: 0.2vh solid rgb(206, 206, 206);
 }
 
 .addMissionContainer {
@@ -170,15 +182,21 @@
 .rowName, .rowEmail, .rowPhone, .rowDate {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    font-size: 2vw;
-    border-bottom: 0.2vh solid black;
+    border-bottom:   0.2vh solid rgb(206, 206, 206);
     padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+    font-size: 1vw;
+
+}
+
+
+.rowName:hover, .rowEmail:hover, .rowPhone:hover, .rowDate:hover, .rowDetail:hover{
+  background-color:rgba(177, 255, 177, 0.288);
 }
 
 .rowDetail {
+  font-size: 1vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 2vw;
     padding-top: 0.5vh;
     padding: 1.5vh 1.5vw 1.5vh 1.5vw;
 }
@@ -196,44 +214,12 @@
     display: none;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
 .App {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 //Login Main Container

@@ -18,7 +18,6 @@ class user extends Component {
 
 
     render() {
-        console.log(this.props.user)
         return (
             <tbody>
                 <tr>

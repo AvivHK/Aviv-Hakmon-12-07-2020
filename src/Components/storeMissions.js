@@ -5,8 +5,8 @@ import { missionStore } from "./missionStore";
 import { createBrowserHistory } from "history";
 import { userStore } from "./userStore";
 const history = createBrowserHistory();
-// const userRoute = "http://localhost:4200";
-const userRoute = "";
+const userRoute = "http://localhost:4200";
+// const userRoute = "";
 
 
 export class StoreMission {
@@ -30,7 +30,6 @@ export class StoreMission {
 
     @action getMissions = async () => {
         let missions;
-        console.log(this.currentUserLoggedIn.userId)
         if (this.currentUserLoggedIn.type === "admin") {
             missions = await axios.get(`${userRoute}/missions`)
         }
@@ -81,7 +80,6 @@ export class StoreMission {
             let data = await axios.get(`${userRoute}/user/${name}`)
             data = data.data
             if (data[0] && data[0].password === password) {
-                console.log("aviv")
                 this.currentUserLoggedIn = new userStore(data[0])
                 this.routeChange();
             }
@@ -103,21 +101,20 @@ export class StoreMission {
             type: "user",
             phone
         });
-        this.currentUserLoggedIn = new userStore({ username, password, name, email, type: "user", phone })
-        console.log(this.currentUserLoggedIn)
+        let user = await this.getUserAfterLogin(username)
+        this.currentUserLoggedIn = new userStore({ userId: user.userId, username: user.username, password: user.password, name: user.name, email: user.email, type: user.type })
         this.routeChange();
 
     }
 
     @action logout = () => {
         this.currentUserLoggedIn = ""
-        console.log(this.currentUserLoggedIn)
     }
 
     @action getUsers = async () => {
         let users = await axios.get(`${userRoute}/users`)
         this.users = users.data.map(u => new userStore(u))
-        console.log(this.users)
+
     }
 
     @action getUsersByEmail = async email => {
@@ -138,6 +135,12 @@ export class StoreMission {
         else {
             return false;
         }
+    }
+
+    @action getUserAfterLogin = async username => {
+        let users = await axios.get(`${userRoute}/user/${username}`)
+        return users.data[0]
+
     }
 
     @action changePermission = async (userId, type) => {
