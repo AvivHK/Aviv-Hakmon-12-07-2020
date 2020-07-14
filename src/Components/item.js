@@ -34,17 +34,17 @@ class item extends Component {
                     <td className="tableRow userNameCol">{this.props.mission.userName}</td>
                     <td className="tableRow phoneNumberCol">{this.props.mission.phoneNumber}</td>
                     <td className="tableRow mailCol">{this.props.mission.mailAddress}</td>
-                    <td className="tableRow dateCol">{moment(this.props.mission.creationDate).format('DD/MM/YYYY')}</td>
+                    <td className="tableRow dateCol hideInPhoneMode">{moment(this.props.mission.creationDate).format('DD/MM/YYYY')}</td>
                     <td className="tableRow actionCol">
                         <div className="actions">
                             <div onClick={this.bigger} >
-                                <i className="fas fa-eye"></i>
+                                <i className="fas fa-eye iconActions"></i>
                             </div>
                             <Link onClick={this.updateCurrent} to="/editMission" className="link action">
-                                <i className="fas fa-pencil-alt"></i>
+                                <i className="fas fa-pencil-alt iconActions"></i>
                             </Link>
                             <div onClick={this.delItem}>
-                                <i className="far fa-trash-alt"></i>
+                                <i className="far fa-trash-alt iconActions"></i>
                             </div>
                         </div>
                     </td>
@@ -53,8 +53,8 @@ class item extends Component {
                     <td className="details"> פרטי המשימה:</td>
                     <td className="details"></td>
                     <td>{this.props.mission.details}</td>
-                    <td className="details"></td>
-                    <td className="details"></td>
+                    <td className="details hideInPhoneMode"></td>
+                    <td className="details">{moment(this.props.mission.creationDate).format('DD/MM/YYYY')}</td>
                 </tr>
             </tbody>
         );

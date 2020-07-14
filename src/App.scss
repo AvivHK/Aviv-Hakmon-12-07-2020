@@ -37,6 +37,7 @@
 }
 
 .missions {
+  font-size: 2vw;
   direction: rtl;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -72,27 +73,7 @@
   color: white;
 }
 
-.userNameCol,
-.typeCol,
-.usernameCol .dateCol {
-  width: 15%;
-}
 
-.userIdCol {
-  width: 5%;
-}
-
-.phoneNumberCol {
-  width: 10%;
-}
-
-.mailCol {
-  width: 35%;
-}
-
-.actionCol {
-  width: 15%;
-}
 
 .action {
   margin-right: 0.5vw;
@@ -163,7 +144,7 @@
   font-size: 1.8vw;
 }
 
-.holdTable{
+.holdTable {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   font-size: 1.5vw;
@@ -185,7 +166,6 @@
 }
 
 .titleAddMission {
-  font-size: 2vw;
   color: rgb(56, 168, 56);
   font-weight: bold;
   margin-top: 2.5vw;
@@ -197,11 +177,11 @@
 .rowEmail,
 .rowPhone,
 .rowDate {
+  font-size: 2vw;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   border-bottom: 0.2vh solid rgb(206, 206, 206);
   padding: 1.5vh 1.5vw 1.5vh 1.5vw;
-  font-size: 1vw;
 }
 
 .rowName:hover,
@@ -213,7 +193,7 @@
 }
 
 .rowDetail {
-  font-size: 1vw;
+  font-size: 2vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 0.5vh;
@@ -488,7 +468,7 @@
         font-size: 21px;
         font-weight: 500;
         color: #fff;
-        margin-right: -1.5vw;
+        margin-right: 1vw;
         margin-left: 6vw;
       }
     }
@@ -513,6 +493,11 @@
       }
     }
   }
+  .iconActions {
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
 
   .headerNav {
     display: grid;
@@ -522,5 +507,27 @@
     direction: rtl;
     height: 4vw;
     align-content: center;
+  }
+  .rowName,
+  .rowEmail,
+  .rowPhone,
+  .rowDate {
+    font-size: 5vw;
+  }
+
+  .rowDetail {
+    font-size: 5vw;
+  }
+  
+  .titleAddMission, .titleMissions, .numOfMission,.titleAdmin{
+    font-size: 5.7vw;
+    
+  }
+  .search{
+    height: 5vh;
+    font-size: 3.3vh;
+  }
+  .hideInPhoneMode{
+    display: none;
   }
 }

@@ -16,7 +16,7 @@ class navbar extends Component {
         return (
             <div className="headerNav">
                 <div className="menu">
-                    <img className="logo" src={Logo}></img>
+                    <img className="logo" alt="PROPiT" src={Logo}></img>
                     <Link className="link" to="/list">חיפוש</Link>
                     <div>מועדפים</div>
                     <div>מחשבון שטחים</div>

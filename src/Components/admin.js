@@ -20,11 +20,11 @@ class admin extends Component {
                     <table dir="rtl" className="users">
                         <thead className="rtl">
                             <tr className="rtl">
-                                <th className="tableHead">מספר</th>
-                                <th className="tableHead">שם משתמש</th>
+                                <th className="tableHead hideInPhoneMode">מספר</th>
+                                <th className="tableHead hideInPhoneMode">שם משתמש</th>
                                 <th className="tableHead">שם</th>
                                 <th className="tableHead">מייל</th>
-                                <th className="tableHead">סוג חשבון</th>
+                                <th className="tableHead hideInPhoneMode">סוג חשבון</th>
                                 <th className="tableHead">טלפון</th>
                                 <th className="tableHead">פעולות</th>
                             </tr>

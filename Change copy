@@ -1,0 +1,32 @@
+ 
+ package.json
+ 
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ________________________________________________________________________________
+
+
+
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node scripts/build.js",
+    "start": "node Server"
+  },

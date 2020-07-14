@@ -102,7 +102,7 @@ export class StoreMission {
             phone
         });
         let user = await this.getUserAfterLogin(username)
-        this.currentUserLoggedIn = new userStore({ userId: user.userId, username: user.username, password: user.password, name: user.name, email: user.email, type: user.type })
+        this.currentUserLoggedIn = new userStore({ userId: user.userId, username: user.username, password: user.password, name: user.name, email: user.email, type: user.type, phone: user.phone })
         this.routeChange();
 
     }
