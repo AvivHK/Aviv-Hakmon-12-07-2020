@@ -5,8 +5,8 @@ import { missionStore } from "./missionStore";
 import { createBrowserHistory } from "history";
 import { userStore } from "./userStore";
 const history = createBrowserHistory();
-// const userRoute = "http://localhost:4200";
-const userRoute = "";
+const userRoute = "http://localhost:4200";
+// const userRoute = "";
 
 
 export class StoreMission {
@@ -80,8 +80,8 @@ export class StoreMission {
             let data = await axios.get(`${userRoute}/user/${name}`)
             data = data.data
             if (data[0] && data[0].password === password) {
-                this.currentUserLoggedIn = new userStore(data[0])
                 this.routeChange();
+                this.currentUserLoggedIn = new userStore(data[0])
             }
             else {
                 this.showLoginErrMsg = true;
@@ -102,8 +102,8 @@ export class StoreMission {
             phone
         });
         let user = await this.getUserAfterLogin(username)
-        this.currentUserLoggedIn = new userStore({ userId: user.userId, username: user.username, password: user.password, name: user.name, email: user.email, type: user.type, phone: user.phone })
         this.routeChange();
+        this.currentUserLoggedIn = new userStore({ userId: user.userId, username: user.username, password: user.password, name: user.name, email: user.email, type: user.type, phone: user.phone })
 
     }
 
