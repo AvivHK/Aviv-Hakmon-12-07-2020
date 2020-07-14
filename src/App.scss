@@ -1,163 +1,177 @@
 .headerNav {
-    display: grid;
-    grid-template-columns: 75vw 25vw;
-    font-size: 1vw;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
-    direction: rtl;
-    height: 4vw;
-    align-content: center;
+  display: grid;
+  grid-template-columns: 75vw 25vw;
+  font-size: 1vw;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+  direction: rtl;
+  height: 4vw;
+  align-content: center;
 }
 
 .logos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  align-items: center;
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: 0.8fr 0.8fr 0.8fr 1.1fr 1fr 1.2fr 1.4fr 1.5fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr 1.1fr 1fr 1.2fr 1.4fr 1.5fr;
+  align-items: center;
 }
 
 .vl {
-    width: 100vw;
-    height: 1px;
-    background-color: grey;
+  width: 100vw;
+  height: 1px;
+  background-color: grey;
 }
 
 .link {
-    text-decoration-line: none;
-    color: black;
+  text-decoration-line: none;
+  color: black;
 }
 
 .listContainer {
-    display: grid;
-    justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 .missions {
-    direction: rtl;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
+  direction: rtl;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-bottom: 10vh;
 }
 
 .rtl {
-    direction: rtl;
+  direction: rtl;
 }
 
 .tableRow {
-    border: 1px solid #ddd;
-    padding: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
-.missions tr:nth-child(even), .user tr:nth-child(even) {
-    background-color: #f2f2f2;
+.missions tr:nth-child(even),
+.user tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.missions tr:hover, .users tr:hover{
-    background-color: rgba(106, 216, 106, 0.397);
+.missions tr:hover,
+.users tr:hover {
+  background-color: rgba(106, 216, 106, 0.397);
 }
 
-.missions th, .users th{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: rgb(196, 194, 194);
-    color: white;
+.missions th,
+.users th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(196, 194, 194);
+  color: white;
 }
 
-.userNameCol, .typeCol, .usernameCol .dateCol {
-    width: 15%;
+.userNameCol,
+.typeCol,
+.usernameCol .dateCol {
+  width: 15%;
 }
 
-.userIdCol{
-  width:5%;
+.userIdCol {
+  width: 5%;
 }
 
 .phoneNumberCol {
-    width: 10%;
+  width: 10%;
 }
 
 .mailCol {
-    width: 35%;
+  width: 35%;
 }
 
 .actionCol {
-    width: 15%;
+  width: 15%;
 }
 
 .action {
-    margin-right: 0.5vw;
+  margin-right: 0.5vw;
 }
 
-.fas, .far {
-    font-size: 1.8vw;
+.fas,
+.far {
+  font-size: 1.8vw;
 }
 
 .tableHead {
-    text-align-last: right;
-    padding-right: 0.5vw;
+  text-align-last: right;
+  padding-right: 0.5vw;
 }
 
 .titleTop {
-    width: 80%;
-    direction: rtl;
-    display: grid;
-    grid-template-columns: 15fr 2fr;
-    margin: 1vw;
+  width: 80%;
+  direction: rtl;
+  display: grid;
+  grid-template-columns: 15fr 2fr;
+  margin: 1vw;
 }
 
 .titleMissions {
-    width: 80%;
-    font-size: 2vw;
-    color: rgb(56, 168, 56);
-    font-weight: bold;
-    margin-top: 2.5vw;
-    margin-bottom: 2vw;
-    direction: rtl;
+  width: 80%;
+  font-size: 2vw;
+  color: rgb(56, 168, 56);
+  font-weight: bold;
+  margin-top: 2.5vw;
+  margin-bottom: 2vw;
+  direction: rtl;
+}
+.adminContainer {
+  padding-right: 10vw;
 }
 
 .titleAdmin {
-  display: grid;
-  justify-content: center;
-    width: 100%;
-    font-size: 2vw;
-    color: rgb(56, 168, 56);
-    font-weight: bold;
-    margin-top: 2.5vw;
-    margin-bottom: 2vw;
-    direction: rtl;
+  width: 100%;
+  font-size: 2vw;
+  color: rgb(56, 168, 56);
+  font-weight: bold;
+  margin-top: 2.5vw;
+  margin-bottom: 2vw;
+  direction: rtl;
 }
 
 .search {
-    width: 79.5%;
-    height: 2.8vw;
-    font-size: 2vw;
+  width: 79.5%;
+  height: 2.8vw;
+  font-size: 2vw;
 }
 
 .newMissionButton {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: rgb(56, 168, 56);
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin-top: 1vh;
-    width: 100%;
-    height: 4vh;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(56, 168, 56);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 1vh;
+  width: 100%;
+  height: 4vh;
 }
 
 .numOfMission {
-    font-size: 1.8vw;
+  font-size: 1.8vw;
+}
+
+.holdTable{
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  font-size: 1.5vw;
 }
 
 .addMissionButton {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 
 .tableAddMessage {
@@ -165,53 +179,58 @@
 }
 
 .addMissionContainer {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    direction: rtl;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  direction: rtl;
 }
 
 .titleAddMission {
-    font-size: 2vw;
-    color: rgb(56, 168, 56);
-    font-weight: bold;
-    margin-top: 2.5vw;
-    margin-bottom: 2vw;
-    direction: rtl;
+  font-size: 2vw;
+  color: rgb(56, 168, 56);
+  font-weight: bold;
+  margin-top: 2.5vw;
+  margin-bottom: 2vw;
+  direction: rtl;
 }
 
-.rowName, .rowEmail, .rowPhone, .rowDate {
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    border-bottom:   0.2vh solid rgb(206, 206, 206);
-    padding: 1.5vh 1.5vw 1.5vh 1.5vw;
-    font-size: 1vw;
-
+.rowName,
+.rowEmail,
+.rowPhone,
+.rowDate {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  border-bottom: 0.2vh solid rgb(206, 206, 206);
+  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+  font-size: 1vw;
 }
 
-
-.rowName:hover, .rowEmail:hover, .rowPhone:hover, .rowDate:hover, .rowDetail:hover{
-  background-color:rgba(177, 255, 177, 0.288);
+.rowName:hover,
+.rowEmail:hover,
+.rowPhone:hover,
+.rowDate:hover,
+.rowDetail:hover {
+  background-color: rgba(177, 255, 177, 0.288);
 }
 
 .rowDetail {
   font-size: 1vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 0.5vh;
-    padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 0.5vh;
+  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
 }
 
 .rowBigger {
-    margin-left: 2vw;
-    height: 10vh;
+  margin-left: 2vw;
+  height: 10vh;
 }
 
 .details {
-    width: 80vw;
+  width: 80vw;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .App {
@@ -225,19 +244,19 @@
 //Login Main Container
 
 .login {
-    width: 27em;
-    height: 40em;
-    //min-height: 44em;
+  width: 27em;
+  height: 40em;
+  //min-height: 44em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+  z-index: 99;
+  .container {
+    direction: rtl;
+    margin-top: 10vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-    position: relative;
-    z-index: 99;
-    .container {
-        direction: rtl;
-        margin-top: 10vh;
-        display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
@@ -310,47 +329,176 @@
   }
 }
 
-
 .base-container {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  
-    .header {
-      font-size: 24px;
-      font-family: "Open Sans", sans-serif;
-    }
-  
-    .content {
+
+    .form {
+      margin-top: 2em;
       display: flex;
       flex-direction: column;
-  
-      .image {
-        width: 21em;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-  
-      .form {
-        margin-top: 2em;
+      align-items: center;
+
+      .form-group {
         display: flex;
         flex-direction: column;
-        align-items: center;
-  
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          width: fit-content;
-          label {
-            font-size: 20px;
+        align-items: flex-start;
+        width: fit-content;
+        label {
+          font-size: 18px;
+        }
+        input {
+          margin-top: 6px;
+          width: 18em;
+          height: 37px;
+          padding: 0px 10px;
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          background-color: #f3f3f3;
+          border: 0;
+          border-radius: 4px;
+          margin-bottom: 31px;
+          transition: all 250ms ease-in-out;
+          &:hover {
+            //background-color: #ffffff;
+            //box-shadow: 0px 0px 14px 0.3px #0e81ce96;
           }
+
+          &:focus {
+            outline: none;
+            box-shadow: 0px 0px 12px 0.8px rgb(56, 168, 56);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 3em;
+  }
+}
+
+.loginAndLogout {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  font-size: 0.7vw;
+  justify-self: center;
+}
+
+.disconnectButton {
+  height: 2vh;
+  width: 80%;
+  display: grid;
+  align-content: center;
+  justify-self: center;
+}
+
+.users {
+  margin-top: 5vh;
+  direction: rtl;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-bottom: 10vh;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 1vh;
+}
+
+.logo {
+  margin-right: 2vh;
+  margin-left: 2vh;
+  width: 10vh;
+}
+
+.fa-phone {
+  color: black;
+  font-size: 1.5vw;
+}
+
+.sayHello {
+  font-size: 1vw;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 2vw;
+}
+
+@media (max-width: 720px) {
+  .logo {
+    margin-right: 2vh;
+    margin-left: 2vh;
+    width: 6vh;
+  }
+
+  .login {
+    width: 60%;
+    height: 80%;
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 90%;
+      background-color: rgb(56, 168, 56);
+      position: absolute;
+      border-radius: 6px;
+      z-index: 1;
+      width: 20%;
+      // transition: all 400ms ease-in-out;
+      cursor: pointer;
+      box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
+
+      &.right {
+        left: 90%;
+        align-items: flex-end;
+        &:hover {
+          left: 90%;
+        }
+      }
+
+      &.left {
+        transform: rotate(180deg);
+        right: 90%;
+        align-items: flex-start;
+        &:hover {
+          right: 90%;
+        }
+      }
+      .text {
+        writing-mode: vertical-rl;
+        font-size: 21px;
+        font-weight: 500;
+        color: #fff;
+        margin-right: -1.5vw;
+        margin-left: 6vw;
+      }
+    }
+
+    .content {
+      .form {
+        .form-group {
           input {
             margin-top: 6px;
-            min-width: 18em;
+            width: 10em;
             height: 37px;
             padding: 0px 10px;
             font-size: 16px;
@@ -360,55 +508,19 @@
             border-radius: 4px;
             margin-bottom: 31px;
             transition: all 250ms ease-in-out;
-            &:hover {
-              //background-color: #ffffff;
-              //box-shadow: 0px 0px 14px 0.3px #0e81ce96;
-            }
-  
-            &:focus {
-              outline: none;
-              box-shadow: 0px 0px 12px 0.8px rgb(56, 168, 56);
-            }
           }
         }
       }
     }
-  
-    .footer {
-      margin-top: 3em;
-    }
   }
 
-  .loginAndLogout{
+  .headerNav {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    font-size: 0.7vw;
-    justify-self: center;
-  }
-  
-  .disconnectButton{
-    height: 2vh;
-    width:80%;
-    display: grid;
-    align-content: center;
-    justify-self: center;
-  }
-
-  .users{
-    margin-top: 5vh;
+    grid-template-columns: 75vw 25vw;
+    font-size: 1.5vw;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
     direction: rtl;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80vw;
-    margin-left: 10vw;
+    height: 4vw;
+    align-content: center;
   }
-
-  .actions{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .errorMsg{
-    color:red;
-    font-size: 1vh;
-  }
+}

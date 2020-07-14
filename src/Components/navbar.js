@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo from "../icon.svg"
+import Logo from "../propitLogo.jpg"
 import { Link } from "react-router-dom";
 import { inject, observer } from 'mobx-react';
 
@@ -8,11 +8,15 @@ import { inject, observer } from 'mobx-react';
 @inject("storeMission")
 @observer
 class navbar extends Component {
+
+    call = () => {
+        window.open('tel:900300400')
+    }
     render() {
         return (
             <div className="headerNav">
                 <div className="menu">
-                    <div>LOGO</div>
+                    <img className="logo" src={Logo}></img>
                     <Link className="link" to="/list">חיפוש</Link>
                     <div>מועדפים</div>
                     <div>מחשבון שטחים</div>
@@ -22,13 +26,10 @@ class navbar extends Component {
                     {this.props.storeMission.currentUserLoggedIn.type === "admin" ? <Link className="link" to="/admin">ניהול משתמשים</Link> : null}
                 </div>
                 <div className="logos">
-                    <div>ICON</div>
-                    <div>077998501</div>
-                    <img src={Logo}></img>
-                    <div className="loginAndLogout">
-                        {this.props.storeMission.currentUserLoggedIn.username ? <div className="sayHello">שלום, {this.props.storeMission.currentUserLoggedIn.name}</div> : null}
-                        {this.props.storeMission.currentUserLoggedIn.username ? <button className="disconnectButton" onClick={this.props.storeMission.logout}>התנתק</button> : null}
-                    </div>
+                    <a href="tel:077-9985042">
+                        <i onClick={this.call} className="fas fa-phone"></i></a>
+                    <div>077-998501</div>
+                    {this.props.storeMission.currentUserLoggedIn.username ? <div onClick={this.props.storeMission.logout} className="sayHello">שלום, {this.props.storeMission.currentUserLoggedIn.name}</div> : null}
                 </div>
             </div>
         );
