@@ -47,7 +47,7 @@
     "mobx-react-devtools": "^6.1.1",
     "moment": "^2.27.0",
     "mysql2": "^2.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "password-validator": "^5.0.3",
     "path": "^0.12.7",
